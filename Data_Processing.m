@@ -1,6 +1,8 @@
-close all
 
-data = "Attempt2.mat";
+clear all
+
+
+data = "attempt5.mat";
 
 dataplot(data)
 
@@ -11,6 +13,7 @@ function [] = dataplot(data)
     sensor_v = sensor_v.Data;
     fan_v = fan_v.Data;
     figure
+    title(data)
     subplot(2, 1, 1);
     plot(time,sensor_v)
     subplot(2, 1, 2);
