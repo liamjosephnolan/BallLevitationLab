@@ -38,7 +38,7 @@ V_fit = fit_function(h_values);
 plot(h_values, V_fit)
 % Shade the region from height 20 to 30 in light gray
 h_shade = [20, 30];
-V_shade = [.8, 2.2];
+V_shade = [0, 3];
 
 % Fill the shaded region with a light gray color
 fill([min(h_shade), min(h_shade), max(h_shade), max(h_shade)], [min(voltage), max(voltage), max(voltage), min(voltage)], 'k', 'FaceAlpha', 0.1);
