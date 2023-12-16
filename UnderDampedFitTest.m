@@ -3,10 +3,11 @@ close all
 clear all
 clc
 
+% Data load and manipulation
 load("attempt5.mat")
+t_under = sensor_v.Time(16250:end)-sensor_v.Time(16250);
+y_under = (sensor_v.Data(16250:end)-sensor_v.Data(16250))*.025;
 
-t_under = sensor_v.Time(16250:end);
-y_under = sensor_v.Data(16250:end);
 %---------------------
 % Underdamped
 %---------------------
