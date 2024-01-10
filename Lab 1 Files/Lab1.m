@@ -32,10 +32,15 @@ p = polyfit(height, voltage,  5);
 % Generate a callable function based on voltage
 fit_function = @(h) polyval(p, h);
 
+fit_function_2 = @(x) -0.000000191794872*x.^5  + 0.000012815850816*x.^4  -0.000235419580420*x.^3 +   0.001575874125874*x.^2 +   0.005415617715617*x + 0.878811188811189;
+
 % Plot fitted function
 h_values = linspace(min(height), max(height), 100); % Adjust the number of points as needed
 V_fit = fit_function(h_values);
+V_fit_2 = fit_function_2(h_values);
 plot(h_values, V_fit)
+hold on
+plot(h_values,V_fit_2);
 % Shade the region from height 20 to 30 in light gray
 h_shade = [20, 30];
 V_shade = [0, 3];
